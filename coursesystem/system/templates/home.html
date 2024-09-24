@@ -21,9 +21,11 @@
 </head>
 <body>
 <div class="container">
-    <h2 class="text-center">Welcome to the Home Page!</h2>
-    <p>You are now logged in!</p>
-    <a href="{% url 'login' %}" class="btn btn-secondary">Logout</a>
-</div>
+    <h1>Welcome, {{ username }}!</h1>
+    {% if username != "Guest" %}
+        <p>You are logged in. <a href="{% url 'logout' %}">Logout</a></p>
+    {% else %}
+        <p>You are currently a guest. <a href="{% url 'login' %}">Login</a> to access more features.</p>
+    {% endif %}</div>
 </body>
 </html>

@@ -1,6 +1,6 @@
 from django.contrib import messages
 from django.shortcuts import render, redirect
-from django.contrib.auth import login, authenticate
+from django.contrib.auth import login, authenticate,logout
 from django.contrib.auth.models import User  # Correctly import User
 from .forms import SignUpForm, LoginForm  # Ensure these forms exist if used
 
@@ -35,4 +35,10 @@ def login_view(request):
 
 
 def home(request):
-    return render(request, 'home.html')
+    username = request.user.username if request.user.is_authenticated else "Guest"
+    return render(request, 'home.html', {'username': username})
+
+def logout_view(request):
+    logout(request)
+    messages.success(request, "You have been logged out successfully.")
+    return redirect('login')  # Redirect to login page after logout

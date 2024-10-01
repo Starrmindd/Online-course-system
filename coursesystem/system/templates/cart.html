@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shopping Cart</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+    <style>
+        .footer-logo {
+            text-align: center;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Header -->
+  
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-mF0gNJV8fprHRVYxYie4qr2/JGG2bhQfQ95kgrIlf/aHoRVXsI3KvjS3/w5w5atp" crossorigin="anonymous">
+
+<header class="navbar navbar-expand-lg navbar-light bg-light shadow-sm py-3">
+    <div class="container-fluid">
+        <!-- Logo -->
+        <a class="navbar-brand" href="#">
+            <img src="assets/img/logo/logo-black.png" alt="Brand Logo" width="150" height="auto">
+        </a>
+
+        <!-- Hamburger Menu for Smaller Screens -->
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <!-- Collapsible Menu -->
+        <div class="collapse navbar-collapse justify-content-between" id="navbarNav">
+            <!-- Left Side Menu Items -->
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                <li class="nav-item">
+                    <a class="nav-link" href="Profile.html">Account</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Courses</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Shop</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">About</a>
+                </li>
+            </ul>
+
+            <!-- Right Side: Search and Cart Icons -->
+            <div class="d-flex align-items-center">
+                <!-- Search Bar -->
+                <form class="d-none d-lg-block me-3" role="search">
+                    <div class="input-group">
+                        <input class="form-control" type="search" placeholder="Search courses..." aria-label="Search">
+                        <button class="btn btn-outline-secondary" type="submit"><i class="fas fa-search"></i></button>
+                    </div>
+                </form>
+
+                <!-- Cart Icon -->
+                <div class="cart-wrapper">
+                    <a href="#" class="text-decoration-none text-dark">
+                        <i class="fas fa-shopping-cart"></i>
+                        <span class="cart-count badge bg-secondary">0</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+
+<!-- Bootstrap JS (required) -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-mpJS0B+6R5BGaYtvZ8n0OXlBBKpndx7S9z/X3zeZ6eGxV/6tq9Zz9A6nqTlh0GIe" crossorigin="anonymous"></script>
+
+<!-- Font Awesome (for icons) -->
+<script src="https://kit.fontawesome.com/a076d05399.js"></script>
+
+
+
+
+    <!-- Contact Info -->
+   
+    <!-- Shopping Cart Section -->
+    <div class="container mt-5">
+        <h2>SHOPPING CART</h2>
+
+        <table class="table">
+            <thead>
+                <tr>
+                    <th>Images</th>
+                    <th>Product</th>
+                    <th>Unit Price</th>
+                    <th>Quantity</th>
+                    <th>Total</th>
+                    <th>Remove</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><img src="https://i0.wp.com/nachogst.com/wp-content/uploads/2023/03/Foto1Cimientos2.jpg?resize=1024%2C1024&ssl=1" alt="Product" width="100"></td>
+                    <td>Turn Yourself</td>
+                    <td>$24.00</td>
+                    <td>1</td>
+                    <td>$24.00</td>
+                    <td><button class="btn btn-danger btn-sm">Remove</button></td>
+                </tr>
+                <tr>
+                    <td><img src="https://i0.wp.com/nachogst.com/wp-content/uploads/2024/06/Portada.png?resize=300%2C200&ssl=1" alt="Product" width="100"></td>
+                    <td>Art of Not Giving</td>
+                    <td>$12.00</td>
+                    <td>1</td>
+                    <td>$12.00</td>
+                    <td><button class="btn btn-danger btn-sm">Remove</button></td>
+                </tr>
+                <tr>
+                    <td><img src="https://i0.wp.com/nachogst.com/wp-content/uploads/2022/12/saludarticular.png?resize=768%2C512&ssl=1" alt="Product" width="100"></td>
+                    <td>Attract Women</td>
+                    <td>$42.00</td>
+                    <td>1</td>
+                    <td>$42.00</td>
+                    <td><button class="btn btn-danger btn-sm">Remove</button></td>
+                </tr>
+            </tbody>
+        </table>
+
+        <div class="d-flex justify-content-between">
+            <div>
+                <h5>Coupon code</h5>
+                <input type="text" class="form-control" placeholder="Enter coupon code">
+                <button class="btn btn-primary mt-2">Apply coupon</button>
+            </div>
+            <div>
+                <h4>Cart Totals</h4>
+                <p>Subtotal: $78.00</p>
+                <p>Total: $78.00</p>
+                <button class="btn btn-success">Proceed to checkout</button>
+            </div>
+        </div>
+    </div>
+    <div class="container text-center mt-3">
+      <p>(555) 674 890 556 | info@example.com</p>
+      <p>3rd Avenue, San Francisco</p>
+  </div>
+
+    <!-- Footer -->
+    <footer class="bg-light mt-5">
+        <div class="container text-center footer-logo">
+            <input type="email" class="form-control" placeholder="Enter Email" style="width: 250px; margin: auto;">
+            <button class="btn btn-primary mt-2">Subscribe</button>
+        </div>
+    </footer>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js" integrity="sha384-..." crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.min.js" integrity="sha384-..." crossorigin="anonymous"></script>
+    
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>

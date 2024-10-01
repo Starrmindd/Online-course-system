@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>My Purchased Videos</title>
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+  <style>
+    body {
+      padding-top: 20px;
+    }
+    .navbar {
+      margin-bottom: 20px;
+    }
+    .video-card {
+      border: 1px solid #ddd;
+      margin-bottom: 20px;
+      padding: 15px;
+      border-radius: 8px;
+    }
+    .video-thumbnail {
+      width: 100%;
+      height: 200px;
+      object-fit: cover;
+    }
+    .watch-button {
+      margin-top: 10px;
+      width: 100%;
+    }
+    .modal-content {
+      background-color: #f8f9fa;
+      padding: 20px;
+      border-radius: 10px;
+    }
+    .modal-video {
+      width: 100%;
+      height: 400px;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- User Navbar -->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="#">My Courses</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav me-auto">
+          <li class="nav-item">
+            <a class="nav-link active" href="#">Purchased Videos</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Profile</a>
+          </li>
+        </ul>
+        <span class="navbar-text">
+          Welcome, User!
+        </span>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Purchased Videos Section -->
+  <div class="container">
+    <h3 class="text-center">Your Purchased Videos</h3>
+    <div class="row mt-4" id="videos-list">
+      <!-- Video Card 1 -->
+      <div class="col-md-4">
+        <div class="video-card">
+          <img src="https://via.placeholder.com/400x200" alt="Video Thumbnail" class="video-thumbnail">
+          <h5 class="mt-2">Turn Yourself</h5>
+          <p>Price: $24.00</p>
+          <button class="btn btn-primary watch-button" data-bs-toggle="modal" data-bs-target="#videoModal1">Watch Video</button>
+        </div>
+      </div>
+
+      <!-- Video Card 2 -->
+      <div class="col-md-4">
+        <div class="video-card">
+          <img src="https://via.placeholder.com/400x200" alt="Video Thumbnail" class="video-thumbnail">
+          <h5 class="mt-2">Art of Not Giving</h5>
+          <p>Price: $12.00</p>
+          <button class="btn btn-primary watch-button" data-bs-toggle="modal" data-bs-target="#videoModal2">Watch Video</button>
+        </div>
+      </div>
+
+      <!-- Video Card 3 -->
+      <div class="col-md-4">
+        <div class="video-card">
+          <img src="https://via.placeholder.com/400x200" alt="Video Thumbnail" class="video-thumbnail">
+          <h5 class="mt-2">Attract Women</h5>
+          <p>Price: $42.00</p>
+          <button class="btn btn-primary watch-button" data-bs-toggle="modal" data-bs-target="#videoModal3">Watch Video</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Video Modal 1 -->
+  <div class="modal fade" id="videoModal1" tabindex="-1" aria-labelledby="videoModal1Label" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+      <div class="modal-content">
+        <h5 class="modal-title" id="videoModal1Label">Turn Yourself</h5>
+        <div class="modal-body">
+          <video controls class="modal-video">
+            <source src="video1.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+          </video>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Video Modal 2 -->
+  <div class="modal fade" id="videoModal2" tabindex="-1" aria-labelledby="videoModal2Label" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+      <div class="modal-content">
+        <h5 class="modal-title" id="videoModal2Label">Art of Not Giving</h5>
+        <div class="modal-body">
+          <video controls class="modal-video">
+            <source src="video2.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+          </video>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Video Modal 3 -->
+  <div class="modal fade" id="videoModal3" tabindex="-1" aria-labelledby="videoModal3Label" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+      <div class="modal-content">
+        <h5 class="modal-title" id="videoModal3Label">Attract Women</h5>
+        <div class="modal-body">
+          <video controls class="modal-video">
+            <source src="video3.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+          </video>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <div class="footer text-center mt-4">
+    <p>&copy; 2024 My Courses</p>
+  </div>
+
+  <!-- Bootstrap JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
